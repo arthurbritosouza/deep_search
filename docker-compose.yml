@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      # Evita que o diretório local .venv sobrescreva o do container
+      - /app/.venv
+    # Carrega variáveis de ambiente do arquivo .env se existir
+    env_file:
+      - .env
+    environment:
+      - UV_LINK_MODE=copy
+    # Permite interação com o terminal (necessário para o input no main.py)
+    stdin_open: true 
+    tty: true

@@ -1,0 +1,33 @@
+{"timestamp": "2026-01-18T00:57:25.837568", "message": "Starting main.py execution", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T00:58:03.680994", "message": "Starting main.py execution", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T00:58:11.289474", "message": "Question received", "data": {"question": "O que \u00e9 um homeme"}, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T00:58:11.291480", "message": "Importing workflow...", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T00:58:12.110483", "message": "Loading agentes.py module", "data": null, "sessionId": "debug-session", "location": "agentes.py"}
+{"timestamp": "2026-01-18T00:58:12.753772", "message": "ImportError importing workflow", "data": {"error": "No module named 'markdownify'"}, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:00:03.851647", "message": "Starting main.py execution", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:00:05.987773", "message": "Question received", "data": {"question": "o qe "}, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:00:05.989840", "message": "Importing workflow...", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:00:06.755378", "message": "Loading agentes.py module", "data": null, "sessionId": "debug-session", "location": "agentes.py"}
+{"timestamp": "2026-01-18T01:00:07.181670", "message": "ImportError importing workflow", "data": {"error": "No module named 'markdownify'"}, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:01:44.095389", "message": "Starting main.py execution", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:01:44.627671", "message": "Question received", "data": {"question": "o"}, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:01:44.629801", "message": "Importing workflow...", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:01:48.164506", "message": "Loading agentes.py module", "data": null, "sessionId": "debug-session", "location": "agentes.py"}
+{"timestamp": "2026-01-18T01:01:48.769743", "message": "Workflow imported successfully", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:01:48.775533", "message": "Invoking graph...", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:01:52.048477", "message": "Error during graph invocation", "data": {"error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."}, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:02:12.864067", "message": "Starting main.py execution", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:02:21.401338", "message": "Question received", "data": {"question": "Como funciona a arquitetura de um container docker"}, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:02:21.403227", "message": "Importing workflow...", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:02:22.108882", "message": "Loading agentes.py module", "data": null, "sessionId": "debug-session", "location": "agentes.py"}
+{"timestamp": "2026-01-18T01:02:22.703444", "message": "Workflow imported successfully", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:02:22.710648", "message": "Invoking graph...", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:02:56.158830", "message": "Graph invocation complete", "data": {"response_keys": ["questionUser", "searchList", "sourceSearchTavily", "contentSearchTavily", "summaryContent", "context", "should_repeat", "responseGenerator"]}, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:03:54.703354", "message": "Starting main.py execution", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:04:18.949702", "message": "Starting main.py execution", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:04:26.739868", "message": "Question received", "data": {"question": "Como funciona a arquitetura de um container docker"}, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:04:26.741584", "message": "Importing workflow...", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:04:28.412303", "message": "Loading agentes.py module", "data": null, "sessionId": "debug-session", "location": "agentes.py"}
+{"timestamp": "2026-01-18T01:04:30.505513", "message": "Workflow imported successfully", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:04:30.511207", "message": "Invoking graph...", "data": null, "sessionId": "debug-session"}
+{"timestamp": "2026-01-18T01:04:51.859849", "message": "Graph invocation complete", "data": {"response_keys": ["questionUser", "searchList", "sourceSearchTavily", "contentSearchTavily", "summaryContent", "context", "should_repeat", "responseGenerator"]}, "sessionId": "debug-session"}

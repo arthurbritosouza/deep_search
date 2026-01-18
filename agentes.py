@@ -1,9 +1,28 @@
+import json
+import datetime
+# #region agent log
+def log_debug(message, data=None):
+    try:
+        log_entry = {
+            "timestamp": datetime.datetime.now().isoformat(),
+            "message": message,
+            "data": data,
+            "sessionId": "debug-session",
+            "location": "agentes.py"
+        }
+        with open("debug.log", "a") as f:
+            f.write(json.dumps(log_entry) + "\n")
+    except Exception:
+        pass
+# #endregion
+
+log_debug("Loading agentes.py module")
+
 from datetime import datetime
 from pydantic import BaseModel, Field
 from langgraph.graph import START, END, StateGraph
 from langchain_core.output_parsers import StrOutputParser
-from langchain_google_genai import ChatGoogleGenerativeAI 
-from langchain_deepseek import ChatDeepSeek
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 from langchain_core.messages import SystemMessage
@@ -12,13 +31,20 @@ from state import classState
 
 load_dotenv()
 
-llm = ChatDeepSeek(
-    model="deepseek-chat",  
-    temperature=0.1,
-    max_tokens=4000
-)
+try:
+    log_debug("Initializing ChatGoogleGenerativeAI")
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+        temperature=0.1,
+        max_tokens=4000
+    )
+    log_debug("ChatGoogleGenerativeAI initialized")
+except Exception as e:
+    log_debug("Failed to initialize ChatGoogleGenerativeAI", {"error": str(e)})
+    raise
 
 def buildSearch(questionUser):
+    log_debug("buildSearch called", {"question": questionUser})
     print("🚀 Iniciando a construção das perguntas de pesquisa...")
     
     systemPrompt = """\
@@ -52,6 +78,7 @@ def buildSearch(questionUser):
     systemPrompt = systemPrompt.format(data_atual=datetime.now().strftime("%d/%m/%Y"), questionUser=questionUser)
     llm_structure = llm.with_structured_output(searchBase)
     result = llm_structure.invoke(systemPrompt) 
+    log_debug("buildSearch result", {"questions": result.searchQuestions})
     print("✅ Perguntas de pesquisa construídas com sucesso!\n")
     return result.searchQuestions
 
@@ -166,6 +193,3 @@ def responseGenerator(questionUser, context):
     llm_structure = llm.with_structured_output(responseBase)
     result = llm_structure.invoke(systemPrompt)
     return result.response
-
-
-    
